@@ -18,13 +18,14 @@ function App() {
     }
   };
 
+  const handleClick = () => {};
+
   const ima = image
     .slice(-3)
     .reverse()
     .map((ima) => {
       return (
         <div key={image._id}>
-
           <div className="card  " style={{ width: '18rem', marginTop: '1rem' }}>
             <img
               className="card-img-top"
@@ -43,13 +44,14 @@ function App() {
       <div className="color">
         <p className="text">Gallery </p>
       </div>
-      <button type="button" className="btn-sm btn-light mt-5">
-        <a href="https://svgshare.com/s/Pkh">
-          <img src="https://svgshare.com/i/Pkh.svg" title="share" />
-          <p style={{ color: ' #2c5282' }}> Upload</p>
-        </a>
-        
-      </button>
+
+      {/* <input type="file" accept="image/*" onClick={handleClick()} /> */}
+      <div className="upload-btn-wrapper mt-3">
+        <button className="btn" > Upload </button>
+        <input type="file" name="myfile" accept="image/*" />
+      </div>
+     
+
       <div className="upload d-flex justify-content-around">{ima}</div>
       <div className="footer">
         <p className="text">Fullstack Challenge - 2020 </p>
